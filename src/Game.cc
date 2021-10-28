@@ -21,12 +21,15 @@ Game::Game()
   gravity = new b2Vec2(0.f, 0.f);
   world = new b2World(*gravity);
   drawPhysics = new DrawPhysics(window);
-  contactEventManager = new ContactEventManager();
+
+
+  contactEventManager = new ContactEventManager(gameObjectsDeleteList);
   world->SetContactListener(contactEventManager);
 
   tileGroup = new TileGroup(window, ASSETS_TILES, 16, 16, GAME_SCALE, 11, 10, ASSETS_TILE_GROUP_1);
 
   gameObjects = new std::vector<GameObject*>();
+  gameObjectsDeleteList = new std::vector<GameObject*>();
 
   character1 = new Character(ASSETS_SPRITES, sf::Vector2f(100.f, 100.f), GAME_SCALE,
   16, 16, 0, 5, 200.f, window, world);

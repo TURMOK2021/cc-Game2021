@@ -49,6 +49,19 @@
       "xtree": "cpp",
       "xutility": "cpp",
       "fstream": "cpp",
-      "regex": "cpp"
+      "regex": "cpp",
+      "array": "cpp",
+      "atomic": "cpp",
+      "*.tcc": "cpp",
+      "cctype": "cpp",
+      "clocale": "cpp",
+      "cstdarg": "cpp",
+      "cwctype": "cpp",
+      "deque": "cpp",
+      "unordered_map": "cpp",
+      "memory_resource": "cpp",
+      "optional": "cpp",
+      "string_view": "cpp",
+      "sstream": "cpp"
     }
   }

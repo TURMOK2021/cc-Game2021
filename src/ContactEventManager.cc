@@ -19,7 +19,11 @@ void ContactEventManager::BeginContact(b2Contact *contact)
 
   if(goA && goB)
   {
-    std::cout << goA->GetTagName() << ", " << goB->GetTagName() << std::endl;
+    //std::cout << goA->GetTagName() << ", " << goB->GetTagName() << std::endl;
+    if(goB->GetTagName().compare("chest") == 0)
+    {
+      std::cout << "Destroy chest" << std::endl;
+    }
   }
 }
 void ContactEventManager::EndContact(b2Contact *contact)
